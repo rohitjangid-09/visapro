@@ -245,16 +245,20 @@
                     <img src="./images/slider-image.png" alt="">
 
                     <div class="container">
-                        <div class="slider-text">
+                        <div class="slider-text ">
                             <span>WELCOME TO VISAPRO</span>
-                            <h1>Immigration & Visa
+                            <h1 class="cssanimation sequence leFadeInLeft">Immigration & Visa
                                 Consultant Agent</h1>
-                            <p>Pellentesque at posuere tellus phasellus scelerisque porem.</p>
-                            <div class="play">
-                                <img src="images/play-button-arrowhead.png" alt="">
-                            </div>
-                        </div>
+                            <p class="cssanimation sequence leFadeInLeft">Pellentesque at posuere tellus phasellus
+                                scelerisque porem.</p>
 
+                        </div>
+                        <a id="play-video" class="video-play-button" href="#">
+                            <span></span>
+                        </a>
+                        <div id="video-overlay" class="video-overlay">
+                            <a class="video-overlay-close">&times;</a>
+                        </div>
                     </div>
                 </div>
 
@@ -264,7 +268,7 @@
                     <div class="container">
                         <div class="slider-text">
                             <span>WELCOME TO VISAPRO</span>
-                            <h1>Immigration & Visa
+                            <h1 class="cssanimation sequence leFadeInLeft">Immigration & Visa
                                 Consultant Agent</h1>
                             <p>Pellentesque at posuere tellus phasellus scelerisque porem.</p>
                             <a href="#">Book An Consultation ></a>
@@ -607,6 +611,59 @@
             <div class="container">
                 <div class="customer-box">
                     <ul class="customer-slider">
+                        <li>
+                            <div class="customer-text">
+                                <div class="customer-box-img">
+                                    <img src="images/customer-img-one.png" alt="">
+                                </div>
+                                <p>There are many variations of passages of
+                                    Lorem Ipsum available, but the majority
+                                    have suffered aklteration in some from, by
+                                    injected humour, or randomisd words
+                                    which don’t look even slightly believable. If
+                                    you are going to use a passage</p>
+                                <img src="images/line.png" alt="">
+                                <h2>Ellen Erye</h2>
+                                <h3>France Working Visa</h3>
+                                <div class="ourlay-icon"><img src="images/customer-icon.png" alt=""></div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="customer-text">
+                                <div class="customer-box-img">
+                                    <img src="images/customer-img-one.png" alt="">
+                                </div>
+                                <p>There are many variations of passages of
+                                    Lorem Ipsum available, but the majority
+                                    have suffered aklteration in some from, by
+                                    injected humour, or randomisd words
+                                    which don’t look even slightly believable. If
+                                    you are going to use a passage</p>
+                                <img src="images/line.png" alt="">
+                                <h2>Ellen Erye</h2>
+                                <h3>France Working Visa</h3>
+                                <div class="ourlay-icon"><img src="images/customer-icon.png" alt=""></div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="customer-text">
+                                <div class="customer-box-img">
+                                    <img src="images/customer-img-one.png" alt="">
+                                </div>
+                                <p>There are many variations of passages of
+                                    Lorem Ipsum available, but the majority
+                                    have suffered aklteration in some from, by
+                                    injected humour, or randomisd words
+                                    which don’t look even slightly believable. If
+                                    you are going to use a passage</p>
+                                <img src="images/line.png" alt="">
+                                <h2>Ellen Erye</h2>
+                                <h3>France Working Visa</h3>
+                                <div class="ourlay-icon"><img src="images/customer-icon.png" alt=""></div>
+                            </div>
+                        </li>
                         <li>
                             <div class="customer-text">
                                 <div class="customer-box-img">
@@ -1012,7 +1069,7 @@
             slidesToShow: 1,
             slidesToScroll: 1,
             autoplay: true,
-            autoplaySpeed: 2000,
+            autoplaySpeed: 3000,
             arrows: false,
         });
 
@@ -1089,6 +1146,56 @@
             });
 
         });
+
+
+
+
+        // text-h1
+        window.onload = function () {
+            animateSequence();
+            animateRandom();
+        };
+
+        function animateSequence() {
+            var a = document.getElementsByClassName('sequence');
+            for (var i = 0; i < a.length; i++) {
+                var $this = a[i];
+                var letter = $this.innerHTML;
+                letter = letter.replace('&amp;',"&");
+                var str = '';
+                var delay = 100;
+                for (l = 0; l < letter.length; l++) {
+                    if (letter[l] != ' ') {
+                        str += '<span style="animation-delay:' + delay + 'ms; -moz-animation-delay:' + delay + 'ms; -webkit-animation-delay:' + delay + 'ms; ">' + letter[l] + '</span>';
+                        delay += 150;
+                    } else
+                        str += letter[l];
+                }
+                $this.innerHTML = str;
+            }
+        }
+
+
+
+        // play
+        $('#play-video').on('click', function (e) {
+            e.preventDefault();
+            $('#video-overlay').addClass('open');
+            $("#video-overlay").append('<iframe width="560" height="315" src="https://www.youtube.com/embed/ngElkyQ6Rhs" frameborder="0" allowfullscreen></iframe>');
+        });
+
+        $('.video-overlay, .video-overlay-close').on('click', function (e) {
+            e.preventDefault();
+            close_video();
+        });
+
+        $(document).keyup(function (e) {
+            if (e.keyCode === 27) { close_video(); }
+        });
+
+        function close_video() {
+            $('.video-overlay.open').removeClass('open').find('iframe').remove();
+        };
     </script>
 </body>
 
