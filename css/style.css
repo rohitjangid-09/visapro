@@ -635,7 +635,7 @@ ul li {
     font-weight: 300;
     font-size: 22px;
     line-height: 31px;
-    width: 500px;
+    width: 100%;
     color: #4A4848;
 }
 
@@ -687,21 +687,69 @@ ul li {
     color: #FFFFFF;
 }
 
-.batton-arrow img {
-    background-color: #F2F2F2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.batton-arrow a {
     height: 37px;
+    width: 37px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 10px;
+    background-color: #F2F2F2;
     border-radius: 40px;
+}
 
+.batton-arrow img {
+    width: 26px;
+    height: 26px;
 }
 
 .bottan-icon {
     align-items: center;
     display: flex;
     justify-content: center;
+}
+
+.all-service {
+    background-color: #e44412;
+    border-radius: 50px;
+    padding: 9px 20px;
+    display: inline-block;
+    margin-top: 30px;
+    transition: 0.5s all ease;
+}
+
+.all-service:hover {
+    background-color: #bd2d10;
+}
+
+.all-service-icon a {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    padding-right: 20px;
+    color: #FFFFFF;
+}
+
+.all-service-icon {
+    display: flex;
+    align-items: center;
+}
+
+.all-service-arrow a {
+    height: 37px;
+    width: 37px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #F2F2F2;
+    border-radius: 40px;
+}
+
+.all-service-arrow img {
+    width: 26px;
+    /* height: 26px; */
 }
 
 .provide-background {
@@ -1699,7 +1747,7 @@ ul li {
 
 
     .slider-img img {
-        height: 330px;
+        height: 353px;
         width: auto;
     }
 
@@ -1753,6 +1801,11 @@ ul li {
         font-weight: 700;
         color: #fff;
     }
+
+    .Visa {
+        display: none;
+    }
+
 
     .visa-logo {
         display: flex;
@@ -1817,12 +1870,14 @@ ul li {
         height: 425px;
     }
 
+    .box ul {
+        margin-top: 20px;
+    }
+
 
     .box ul li {
-
         width: 100%;
-
-        margin: 0px 0px 51px;
+        margin: 0px 0px 35px;
     }
 
     .box ul {
@@ -1853,7 +1908,7 @@ ul li {
     }
 
     .services-right-penal h2 {
-
+        width: 100%;
         font-size: 32px;
 
     }
@@ -1881,8 +1936,7 @@ ul li {
 
         font-size: 16px;
         line-height: 25px;
-        padding-left: 8px;
-        width: 354px;
+        width: 100%;
     }
 
     .right-arrow-text>p {
@@ -1894,9 +1948,9 @@ ul li {
         width: 303px;
     }
 
-    .services-right-penal-bottom {
+    /* .services-right-penal-bottom {
         padding-left: 8px;
-    }
+    } */
 
     .bottan {
 
@@ -2038,7 +2092,7 @@ ul li {
     }
 
     .Online-img img {
-        width: 90%;
+        width: 100%;
     }
 
     .online-box {
@@ -2052,7 +2106,7 @@ ul li {
 
     .Online-text {
         margin: auto;
-        padding: 20px;
+        padding: 0 0px 26px 17px;
     }
 
     .Online-text h2 {
